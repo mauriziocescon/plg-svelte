@@ -1,6 +1,6 @@
 <script>
-	import Counter from './Counter.svelte';
-	import Attachments from './Attachments.svelte';
+	import Counter from './sub/Counter.svelte';
+	import Attachments from './sub/Attachments.svelte';
 </script>
 
 <Counter />
