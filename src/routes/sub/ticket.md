@@ -45,7 +45,7 @@ export class ElementWithValue {
 ```
 With a typed `elRef` as a framework-level marker, Angular could catch these errors much more accurately.
 
-The point is that features like this are already common in other frameworks, such as Solid 2 with ref directive factories, or Svelte (via `svelte2tsx` and `IntrinsicElements`, if I understand correctly 😅):
+The point is that features like this are already common in other frameworks, such as Solid 2 with ref directive factories, or Svelte (via `svelte2tsx` and `IntrinsicElements`):
 
 ```sveltehtml
 <script lang="ts">
@@ -70,13 +70,13 @@ After the exciting announcements at ngPoland two years ago, there seems to have 
 I am not talking about small or medium changes, but significant ones like:
 - better template types (like this ticket),
 - selectorless components/directives,
-- hostless components/directives,
+- hostless components,
 - better content projection,
 - component encapsulation (`ref` / `expose` as in Vue, rather than `viewQuery` / public class interface),
 - colocality,
 - and more generally, legible template patterns.
 
-I do not think there is any disagreement that these are big challenges likely requiring a new authoring format, and they would likely require a new authoring format. But they would massively improve the current situation, while also moving Angular forward in terms of modernity, ease of use, predictability, and correctness.
+I do not think there is any disagreement that these are big challenges likely requiring a new authoring format. But they would massively improve the current situation, while also moving Angular forward in terms of modernity, ease of use, predictability, and correctness.
 And not only for humans. I believe this would benefit AI agents as well, because we would end up with:
 - far better types,
 - legible constraints,
@@ -96,4 +96,4 @@ If possible, I would sincerely like to understand this a bit better.
 
 As usual, thanks a lot!
 
-PS: For the record, I am not against the team's AI focus. Quite the contrary. Nor do I measure a framework's quality by the number of lines in a counter component. That era is over 😅. I would simply like Angular to be easy to reason about for humans and very AI-friendly by design.
+PS: For the record, I am not against the team's AI focus - quite the contrary - nor do I measure a framework's quality by the number of lines in a counter component - that era is over 😅. I would simply like Angular to be easy to reason about for humans and very AI-friendly by design.
