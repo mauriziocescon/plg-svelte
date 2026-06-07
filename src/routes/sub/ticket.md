@@ -88,7 +88,7 @@ These seem to be roughly the criteria that make a framework AI-friendly by desig
 
 So I really wonder:
 - Am I completely off with these arguments?
-- Is the amount of training data from the last 10 years so important that changing Angular's current model might create more problems than benefits?
+- Is the amount of training data from the last 10 years so important that changing Angular's current template syntax might create more problems than benefits?
 - Is this mainly about Google-internal priorities? tsgo?
 - What am I missing in this picture?
 
