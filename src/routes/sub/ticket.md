@@ -64,7 +64,7 @@ The point is that features like this are already common in other frameworks, suc
 
 I think there's no disagreement that any large enterprise codebase would benefit from better-typed templates like this one. 
 
-However, when it comes to the future of Angular templates, I am quite confused about the team's direction.
+However, when it comes to the future of Angular templates, I am a bit confused about the team's direction.
 After the exciting announcements at ngPoland two years ago, there seems to have been a substantial shift back to a very conservative position, where template changes are no longer on the roadmap, mostly because of the rise of AI.
 
 I am not talking about small or medium changes, but significant ones like:
