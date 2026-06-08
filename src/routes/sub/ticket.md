@@ -84,7 +84,7 @@ And not only for humans. I believe this would benefit AI agents as well, because
 - colocality,
 - canonical patterns.
 
-These seem to be roughly the criteria that make a framework AI-friendly by design, based on many conversations with Claude / Codex / Gemini 😅.
+These seem to be roughly the criteria that make a framework easy to reason about for humans and very AI-friendly by design, based on many conversations with Claude / Codex / Gemini 😅.
 
 So I wonder:
 - Am I completely off with these arguments?
@@ -92,8 +92,6 @@ So I wonder:
 - Is this mainly about Google-internal priorities? tsgo?
 - What am I missing in this picture?
 
-If possible, I would sincerely like to understand this a bit better.
+If possible, I'd like to understand this a bit better.
 
 As usual, thanks a lot!
-
-PS: For the record, I am not against the team's AI focus nor do I measure a framework's quality by the number of lines of code in a counter component - that era is over 😅. I would simply like Angular to be easy to reason about for humans and very AI-friendly by design.
