@@ -54,7 +54,7 @@ The point is that features like this are already common in other frameworks, suc
   }
 </script>
 
-<button x="{10}">Click me!</button>         <!-- ❌ compile error: x not a valid binding -->
+<button x={10}>Click me!</button>           <!-- ❌ compile error: x not a valid binding -->
 
 <input {@attach logValue} />                <!-- ✅ has value -->
 <textarea {@attach logValue}></textarea>    <!-- ✅ has value -->

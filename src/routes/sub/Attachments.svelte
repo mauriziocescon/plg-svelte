@@ -1,10 +1,10 @@
 <script lang="ts">
-function logValue(node: HTMLImageElement & {value: string }) {
+function logValue(node: HTMLElement & {value: string }) {
     node.addEventListener('input', () => console.log(node.value));
 }
 </script>
 
-<!--<button x="{10}">Click me!</button>					&lt;!&ndash; ❌compile error: x not a valid binding &ndash;&gt;-->
+<!--<button x={10}>Click me!</button>					&lt;!&ndash; ❌compile error: x not a valid binding &ndash;&gt;-->
 
 <input {@attach logValue} />                <!-- ✅has value -->
 <textarea {@attach logValue}></textarea>    <!-- ✅has value -->
