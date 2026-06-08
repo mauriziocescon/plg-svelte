@@ -82,11 +82,11 @@ And not only for humans. I believe this would benefit AI agents as well, because
 - legible constraints,
 - self-describing contracts,
 - colocality,
-- canonical patterns,
+- canonical patterns.
 
 These seem to be roughly the criteria that make a framework AI-friendly by design, based on many conversations with Claude / Codex / Gemini 😅.
 
-So I really wonder:
+So I wonder:
 - Am I completely off with these arguments?
 - Is the amount of training data from the last 10 years so important that changing Angular's current template syntax might create more problems than benefits?
 - Is this mainly about Google-internal priorities? tsgo?
@@ -96,4 +96,4 @@ If possible, I would sincerely like to understand this a bit better.
 
 As usual, thanks a lot!
 
-PS: For the record, I am not against the team's AI focus - quite the contrary - nor do I measure a framework's quality by the number of lines in a counter component - that era is over 😅. I would simply like Angular to be easy to reason about for humans and very AI-friendly by design.
+PS: For the record, I am not against the team's AI focus nor do I measure a framework's quality by the number of lines of code in a counter component - that era is over 😅. I would simply like Angular to be easy to reason about for humans and very AI-friendly by design.
