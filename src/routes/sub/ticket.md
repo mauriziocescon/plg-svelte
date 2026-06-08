@@ -78,11 +78,11 @@ I am not talking about small or medium changes, but significant ones like:
 
 I do not think there is any disagreement that these are big challenges likely requiring a new authoring format. But they would massively improve the current situation, while also moving Angular forward in terms of modernity, ease of use, predictability, and correctness.
 And not only for humans. I believe this would benefit AI agents as well, because we would end up with:
-- far better types,
+- better types,
 - legible constraints,
 - self-describing contracts,
 - colocality,
-- canonical patterns.
+- better canonical patterns.
 
 These seem to be roughly the criteria that make a framework easy to reason about for humans and very AI-friendly by design, based on many conversations with Claude / Codex / Gemini 😅.
 
