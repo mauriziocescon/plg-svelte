@@ -1,4 +1,8 @@
 <script lang="ts">
+    import type { Snippet } from 'svelte';
+
+    const {children} = $props<{children: Snippet}>();
+
     let show = $state(false);
 
     class Todo {
@@ -30,3 +34,5 @@
     {c.doubleText}
     <input bind:value={c.text} />
 {/if}
+
+{@render children()}
