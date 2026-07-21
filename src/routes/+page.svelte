@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Counter from './sub/Counter.svelte';
 	import Attachments from './sub/Attachments.svelte';
+	import Counter from './sub/Counter.svelte';
+	import Expander from './sub/Expander.svelte';
 
 	let value = $state(10);
 
@@ -27,4 +28,7 @@
 {:else}
 	<Attachments bind:this={att} />
 {/if}
+
+<hr />
+<Expander />
 
