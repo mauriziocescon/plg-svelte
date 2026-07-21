@@ -18,7 +18,7 @@
 {/snippet}
 
 <Counter>
-	<input type="text" value={value} />
+	<input bind:value={value} type="number" />
 </Counter>
 
 <button onclick={doSomething}>Do something</button>
