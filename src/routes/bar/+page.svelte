@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-
-	let name = $state('World');
+	import { fade } from 'svelte/transition';
 
 	onDestroy(() => {
 		console.log('Bar page destroyed');
@@ -14,7 +13,5 @@
 	<a href="/foo">Go to Foo</a>
 </nav>
 
-<p>Hello, {name}!</p>
-<input bind:value={name} placeholder="Enter your name" />
-
+<h3 out:fade>Bar fades out</h3>
 
