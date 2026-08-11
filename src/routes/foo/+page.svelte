@@ -3,6 +3,7 @@
 	import { fade } from 'svelte/transition';
 
 	import Attachments from './Attachments.svelte';
+	import Counter from './Counter.svelte';
 
 	let value = $state(10);
 
@@ -26,14 +27,14 @@
 
 <h3 out:fade>Foo fades out</h3>
 
-<!--<Counter>-->
-<!--	<input bind:value={value} type="number" />-->
-<!--</Counter>-->
+<Counter>
+	<input bind:value={value} type="number" />
+</Counter>
 
-<!--<button onclick={doSomething}>Do something</button>-->
+<button onclick={doSomething}>Do something</button>
 
-<!--{#if true}-->
-<!--	<Attachments bind:this={att} />-->
-<!--{:else}-->
-<!--	<Attachments bind:this={att} />-->
-<!--{/if}-->
+{#if true}
+	<Attachments bind:this={att} />
+{:else}
+	<Attachments bind:this={att} />
+{/if}
