@@ -19,13 +19,13 @@
 	});
 </script>
 
-<h1>Bar Page</h1>
+<h1>Foo Page</h1>
 <nav>
 	<a href="/bar">Go to Bar</a>
 	<a href="/foo">Go to Foo</a>
 </nav>
 
-<h3 out:fade>Foo fades out</h3>
+<h3 out:fade={{ duration: 2000 }}>Foo fades out</h3>
 
 <Counter>
 	<input bind:value={value} type="number" />

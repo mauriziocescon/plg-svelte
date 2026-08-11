@@ -13,5 +13,5 @@
 	<a href="/foo">Go to Foo</a>
 </nav>
 
-<h3 out:fade>Bar fades out</h3>
+<h3 out:fade={{ duration: 2000 }}>Bar fades out</h3>
 
