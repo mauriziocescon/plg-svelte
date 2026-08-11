@@ -25,7 +25,9 @@
 	<a href="/foo">Go to Foo</a>
 </nav>
 
-<h3 out:fade={{ duration: 2000 }}>Foo fades out</h3>
+{#if true}
+	<h3 out:fade={{ duration: 1000 }}>Foo fades out</h3>
+{/if}
 
 <Counter>
 	<input bind:value={value} type="number" />
