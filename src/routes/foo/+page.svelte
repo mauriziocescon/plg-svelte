@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
+	import { fade } from 'svelte/transition';
+
 	import Attachments from './Attachments.svelte';
-	import Counter from './Counter.svelte';
-	import Expander from './Expander.svelte';
 
 	let value = $state(10);
 
@@ -24,21 +24,16 @@
 	<a href="/foo">Go to Foo</a>
 </nav>
 
-{#snippet children()}
-	<p>Hello from children snippet</p>
-{/snippet}
+<h3 out:fade>Foo fades out</h3>
 
-<Counter>
-	<input bind:value={value} type="number" />
-</Counter>
+<!--<Counter>-->
+<!--	<input bind:value={value} type="number" />-->
+<!--</Counter>-->
 
-<button onclick={doSomething}>Do something</button>
+<!--<button onclick={doSomething}>Do something</button>-->
 
-{#if true}
-	<Attachments bind:this={att} />
-{:else}
-	<Attachments bind:this={att} />
-{/if}
-
-<hr />
-<Expander />
+<!--{#if true}-->
+<!--	<Attachments bind:this={att} />-->
+<!--{:else}-->
+<!--	<Attachments bind:this={att} />-->
+<!--{/if}-->
