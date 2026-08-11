@@ -1,5 +1,11 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
+
 	let name = $state('World');
+
+	onDestroy(() => {
+		console.log('Bar page destroyed');
+	});
 </script>
 
 <h1>Bar Page</h1>

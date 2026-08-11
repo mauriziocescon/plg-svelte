@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
 	import Attachments from './Attachments.svelte';
 	import Counter from './Counter.svelte';
 	import Expander from './Expander.svelte';
@@ -11,6 +12,10 @@
 		console.log('doSomething');
 		att?.example;
 	}
+
+	onDestroy(() => {
+		console.log('Foo page destroyed');
+	});
 </script>
 
 <h1>Bar Page</h1>
