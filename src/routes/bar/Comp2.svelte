@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { getAppContext } from '$lib/app-context.ts';
-	import { setBarContext } from './bar-context.ts';
+	import { getBarContext, setBarContext } from './bar-context.ts';
 	import Comp3 from './Comp3.svelte';
 	import Child from './Child.svelte';
 
@@ -19,11 +19,9 @@
 	});
 </script>
 
-<input bind:value />
-
 AppName: {getAppContext().appName}
-<p>Count: {value.length}</p>
-
+<p>Count in Comp2: {getBarContext().count}</p>
+<input bind:value />
 {#if children}
 	{@render children()}
 {/if}
