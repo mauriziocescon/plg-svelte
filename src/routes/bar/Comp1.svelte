@@ -20,6 +20,9 @@
 <p>Count in Comp1: {getBarContext().count}</p>
 <input bind:value />
 <br />
-<Comp2>
+
+{#snippet children()}
 	<Child />
-</Comp2>
+{/snippet}
+
+<Comp2 {children} />
