@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { getAppContext } from '$lib/app-context.ts';
+
+	import Comp1 from './Comp1.svelte';
+
+	const app = getAppContext();
 
 	onDestroy(() => {
 		console.log('Bar page destroyed');
@@ -14,3 +19,6 @@
 </nav>
 
 <h3 out:fade={{ duration: 1000 }}>Bar fades out</h3>
+
+<p>{app.appName} v{app.version}</p>
+<Comp1 />
