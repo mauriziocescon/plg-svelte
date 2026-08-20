@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getAppContext } from '$lib/app-context.ts';
-	import { setBarContext } from './bar-context.ts';
+	import { getBarContext, setBarContext } from './bar-context.ts';
 
 	let value = $state('');
 
@@ -12,9 +12,11 @@
 			value = 'x'.repeat(v);
 		}
 	});
+
+	const bar = getBarContext();
 </script>
 
 <input bind:value />
 
 AppName: {getAppContext().appName}
-<p>Count: {value.length}</p>
+<p>Count in Comp2: {bar.count}</p>
