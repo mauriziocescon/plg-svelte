@@ -19,6 +19,5 @@
 </nav>
 
 <h3 out:fade={{ duration: 1000 }}>Bar fades out</h3>
-
-<p>{app.appName} v{app.version}</p>
+<br />
 <Comp1 />
