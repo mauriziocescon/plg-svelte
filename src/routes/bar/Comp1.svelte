@@ -2,6 +2,7 @@
 	import { getAppContext } from '$lib/app-context.ts';
 	import { getBarContext, setBarContext } from './bar-context.ts';
 	import Comp2 from './Comp2.svelte';
+	import Comp3 from './Comp3.svelte';
 	import Child from './Child.svelte';
 
 	let value = $state('');
@@ -21,8 +22,9 @@
 <input bind:value />
 <br />
 
-{#snippet children()}
+{#snippet c()}
 	<Child />
 {/snippet}
 
-<Comp2 {children} />
+<Comp2 children={c} />
+<Comp3 />
