@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { getAppContext } from '$lib/app-context.ts';
-	import Comp2 from './Comp2.svelte';
 	import { setBarContext } from './bar-context.ts';
+	import Comp2 from './Comp2.svelte';
+	import Child from './Child.svelte';
 
 	let value = $state('');
 
@@ -18,4 +19,6 @@
 <h3>Comp1: {getAppContext().appName}</h3>
 <input bind:value />
 <br />
-<Comp2 />
+<Comp2>
+	<Child />
+</Comp2>
