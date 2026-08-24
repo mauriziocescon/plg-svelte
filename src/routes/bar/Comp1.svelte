@@ -7,7 +7,7 @@
 
 	const app = getAppContext();
 
-	let value = $state('');
+	let { value = $bindable('') } = $props();
 	setCountContext(new Count(() => value.length));
 	const count = getCountContext();
 </script>

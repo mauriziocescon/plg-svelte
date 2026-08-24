@@ -7,6 +7,8 @@
 
 	const app = getAppContext();
 
+	let value = $state('');
+
 	onDestroy(() => {
 		console.log('Bar page destroyed');
 	});
@@ -20,4 +22,6 @@
 
 <h3 out:fade={{ duration: 1000 }}>Bar fades out</h3>
 <br />
-<Comp1 />
+<input bind:value />
+<br />
+<Comp1 {value} />
