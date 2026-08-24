@@ -2,15 +2,9 @@
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	import { defineContext, useCounter } from './count-context.svelte.ts';
-
 	import Attachments from './Attachments.svelte';
+	import Counter from './Counter.svelte';
 	import Title from './Title.svelte';
-
-	let value = $state(10);
-
-	defineContext(() => 'Counter', () => value);
-	const ctx = useCounter();
 
 	let att: Attachments | undefined = $state();
 
@@ -27,6 +21,8 @@
 
 <h3 out:fade={{ duration: 1000 }}>Foo fades out</h3>
 
-<p>Context desc: {ctx.desc()}</p>
 <Attachments bind:this={att} />
+<hr />
+<Counter />
+<hr />
 <Title />
