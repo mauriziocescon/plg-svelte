@@ -5,13 +5,15 @@
 	import Comp3 from './Comp3.svelte';
 	import Child from './Child.svelte';
 
-	let value = $state('');
+	const app = getAppContext();
 
+	let value = $state('');
 	setCountContext(new Count(() => value.length));
+	const count = getCountContext();
 </script>
 
-<h3>Comp1: {getAppContext().appName}</h3>
-<p>Count in Comp1: {getCountContext().getCount()}</p>
+<h3>Comp1: {app.appName}</h3>
+<p>Count in Comp1: {count.getCount()}</p>
 <input bind:value />
 <br />
 

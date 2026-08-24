@@ -7,13 +7,16 @@
 
 	const { children }: { children?: Snippet } = $props();
 
-	let value = $state('');
+	const app = getAppContext();
 
+	let value = $state('');
 	setCountContext(new Count(() => value.length));
+
+	const count = getCountContext();
 </script>
 
-AppName: {getAppContext().appName}
-<p>Count in Comp2: {getCountContext().getCount()}</p>
+AppName: {app.appName}
+<p>Count in Comp2: {count.getCount()}</p>
 <input bind:value />
 {#if children}
 	{@render children()}

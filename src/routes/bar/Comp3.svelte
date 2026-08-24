@@ -5,6 +5,9 @@
 
 	const { children }: { children?: Snippet } = $props();
 
+	const app = getAppContext();
+	const count = getCountContext();
+
 	let dialogEl: HTMLDialogElement;
 
 	function openModal() {
@@ -20,15 +23,15 @@
 	{@render children()}
 {/if}
 
-<h3>Comp3: {getAppContext().appName}</h3>
-<p>Count in Comp3: {getCountContext().getCount()}</p>
-<button onclick={() => getCountContext().setCount(42)}>Set count to 42</button>
+<h3>Comp3: {app.appName}</h3>
+<p>Count in Comp3: {count.getCount()}</p>
+<button onclick={() => count.setCount(42)}>Set count to 42</button>
 <button onclick={openModal}>Open modal</button>
 
 <dialog bind:this={dialogEl}>
 	<h2>Modal</h2>
-	<p>Count is: {getCountContext().getCount()}</p>
-	<button onclick={() => getCountContext().setCount(0)}>Reset count</button>
+	<p>Count is: {count.getCount()}</p>
+	<button onclick={() => count.setCount(0)}>Reset count</button>
 	<button onclick={closeModal}>Close</button>
 </dialog>
 

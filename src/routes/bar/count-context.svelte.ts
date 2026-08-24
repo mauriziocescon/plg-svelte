@@ -1,10 +1,10 @@
 import { createContext } from 'svelte';
 
 export class Count {
-	private count: number;
+	count: number;
 
 	constructor(value: () => number) {
-		this.count = $derived(value());
+		this.count = $derived.by(value);
 	}
 
 	getCount() {
