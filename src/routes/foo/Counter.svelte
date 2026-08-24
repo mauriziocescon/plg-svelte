@@ -1,10 +1,14 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { defineContext, useCounter } from './count-context.svelte.ts';
 
-	const { children } = $props<{ children: Snippet }>();
+	defineContext(() => 'Counter', () => 0);
+	const ctx = useCounter();
 </script>
 
-<h3 out:fade={{ duration: 2000 }}>Counter fades out</h3>
-
-{@render children()}
+<div style="display: inline-flex; align-items: center; gap: 0.5rem;">
+	<button onclick={() => ctx.decrease()}>-</button>
+	<p>{ctx.getCount()} (context: {ctx.desc()})</p>
+	<button onclick={() => ctx.increase()}>+</button>
+</div>
+<br />
+<button onclick={() => ctx.reset()}>Reset</button>

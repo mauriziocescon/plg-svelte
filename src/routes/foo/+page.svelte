@@ -4,15 +4,9 @@
 
 	import Attachments from './Attachments.svelte';
 	import Counter from './Counter.svelte';
-
-	let value = $state(10);
+	import Title from './Title.svelte';
 
 	let att: Attachments | undefined = $state();
-
-	function doSomething() {
-		console.log('doSomething');
-		att?.example;
-	}
 
 	onDestroy(() => {
 		console.log('Foo page destroyed');
@@ -27,14 +21,8 @@
 
 <h3 out:fade={{ duration: 1000 }}>Foo fades out</h3>
 
-<Counter>
-	<input bind:value={value} type="number" />
-</Counter>
-
-<button onclick={doSomething}>Do something</button>
-
-{#if true}
-	<Attachments bind:this={att} />
-{:else}
-	<Attachments bind:this={att} />
-{/if}
+<Attachments bind:this={att} />
+<hr />
+<Counter />
+<hr />
+<Title />

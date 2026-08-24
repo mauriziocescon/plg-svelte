@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { getAppContext } from '$lib/app-context.svelte';
+
+	import Comp1 from './Comp1.svelte';
+
+	const app = getAppContext();
+
+	let value = $state('');
 
 	onDestroy(() => {
 		console.log('Bar page destroyed');
@@ -14,3 +21,7 @@
 </nav>
 
 <h3 out:fade={{ duration: 1000 }}>Bar fades out</h3>
+<br />
+<input bind:value />
+<br />
+<Comp1 {value} />
