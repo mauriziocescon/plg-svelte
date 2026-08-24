@@ -1,18 +1,30 @@
 import { createContext } from 'svelte';
 
 export class Count {
-	count: number;
+	#c: number;
 
 	constructor(value: () => number) {
-		this.count = $derived.by(value);
+		this.#c = $derived.by(value);
 	}
 
 	getCount() {
-		return this.count;
+		return this.#c;
 	}
 
-	setCount(newCount: number) {
-		this.count = newCount;
+	setCount(value: number) {
+		this.#c = value;
+	}
+
+	decrease() {
+		this.#c -= 1;
+	}
+
+	increase() {
+		this.#c += 1;
+	}
+
+	reset() {
+		this.#c = 0;
 	}
 }
 
