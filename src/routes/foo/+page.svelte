@@ -14,11 +14,6 @@
 
 	let att: Attachments | undefined = $state();
 
-	function doSomething() {
-		console.log('doSomething');
-		att?.example;
-	}
-
 	onDestroy(() => {
 		console.log('Foo page destroyed');
 	});
