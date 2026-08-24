@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { getAppContext } from '$lib/app-context.ts';
+	import { getAppContext } from '$lib/app-context.svelte.ts';
 	import { Count, getCountContext, setCountContext } from './count-context.svelte.ts';
 	import Comp3 from './Comp3.svelte';
 	import Child from './Child.svelte';

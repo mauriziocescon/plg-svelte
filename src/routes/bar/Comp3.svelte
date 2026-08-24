@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { getAppContext } from '$lib/app-context.ts';
+	import { getAppContext } from '$lib/app-context.svelte.ts';
 	import { getCountContext } from './count-context.svelte.ts';
 
 	const { children }: { children?: Snippet } = $props();

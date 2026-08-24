@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { getAppContext } from '$lib/app-context.ts';
+	import { getAppContext } from '$lib/app-context.svelte.ts';
 
 	import Comp1 from './Comp1.svelte';
 

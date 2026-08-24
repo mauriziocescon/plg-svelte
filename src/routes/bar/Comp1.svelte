@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getAppContext } from '$lib/app-context.ts';
+	import { getAppContext } from '$lib/app-context.svelte.ts';
 	import { Count, getCountContext, setCountContext } from './count-context.svelte.ts';
 	import Comp2 from './Comp2.svelte';
 	import Comp3 from './Comp3.svelte';
