@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { getBarContext } from './bar-context.ts';
-
-	const bar = getBarContext();
+	import { getCountContext } from './count-context.svelte.ts';
 </script>
 
-<p style="color: red">Child: {bar.count}</p>
+<p style="color: red">Child: {getCountContext().getCount()}</p>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { getAppContext } from '$lib/app-context.ts';
-	import { getBarContext, setBarContext } from './bar-context.ts';
+	import { Count, getCountContext, setCountContext } from './count-context.svelte.ts';
 	import Comp3 from './Comp3.svelte';
 	import Child from './Child.svelte';
 
@@ -9,18 +9,11 @@
 
 	let value = $state('');
 
-	setBarContext({
-		get count() {
-			return value.length;
-		},
-		setCount: (v: number) => {
-			value = 'x'.repeat(v);
-		}
-	});
+	setCountContext(new Count(() => value.length));
 </script>
 
 AppName: {getAppContext().appName}
-<p>Count in Comp2: {getBarContext().count}</p>
+<p>Count in Comp2: {getCountContext().getCount()}</p>
 <input bind:value />
 {#if children}
 	{@render children()}

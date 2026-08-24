@@ -1,11 +1,9 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { getAppContext } from '$lib/app-context.ts';
-	import { getBarContext } from './bar-context.ts';
+	import { getCountContext } from './count-context.svelte.ts';
 
 	const { children }: { children?: Snippet } = $props();
-
-	const bar = getBarContext();
 
 	let dialogEl: HTMLDialogElement;
 
@@ -23,14 +21,14 @@
 {/if}
 
 <h3>Comp3: {getAppContext().appName}</h3>
-<p>Count in Comp3: {bar.count}</p>
-<button onclick={() => bar.setCount(42)}>Set count to 42</button>
+<p>Count in Comp3: {getCountContext().getCount()}</p>
+<button onclick={() => getCountContext().setCount(42)}>Set count to 42</button>
 <button onclick={openModal}>Open modal</button>
 
 <dialog bind:this={dialogEl}>
 	<h2>Modal</h2>
-	<p>Count is: {bar.count}</p>
-	<button onclick={() => bar.setCount(0)}>Reset count</button>
+	<p>Count is: {getCountContext().getCount()}</p>
+	<button onclick={() => getCountContext().setCount(0)}>Reset count</button>
 	<button onclick={closeModal}>Close</button>
 </dialog>
 
