@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from './Button.svelte';
+	import Img from './Img.svelte';
 
 	let btn: Button | undefined = $state();
 
@@ -20,7 +21,13 @@
 
 <img {@attach logImage} alt="" src="/favicon.png" />  <!-- ✅is an img -->
 
-<!-- ⚠️ {@attach logImage} cannot be added to Button: Button renders a <button>, not an <img>, so it does not satisfy HTMLImageElement -->
+<!-- ❌️ {@attach logImage} cannot be added to Button: Button renders a <button>, not an <img>, so it does not satisfy HTMLImageElement -->
 <!--<Button {@attach logImage} {@attach logValue} />-->
 
 <Button {@attach logValue} bind:this={btn} />
+
+<!-- ✅ Img renders an <img>, so {@attach logImage} type-checks -->
+<Img {@attach logImage} alt="" src="/favicon.png" />
+
+<!-- ❌️ {@attach logValue} cannot be added to Img: <img> has no `value` -->
+<!--<Img {@attach logValue} alt="" src="/favicon.png" />-->
