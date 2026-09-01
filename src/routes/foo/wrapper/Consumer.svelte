@@ -18,6 +18,8 @@
 <!--<div {@attach logValue}></div>              &lt;!&ndash; ❌compile error: div has no value &ndash;&gt;-->
 <!--<div {@attach logImage}></div>              &lt;!&ndash; ❌compile error: div is not an img &ndash;&gt;-->
 
-<Button {@attach logImage} {@attach logValue} />
+<img {@attach logImage} alt="" src="/favicon.png" />  <!-- ✅is an img -->
+
 <!-- ⚠️ {@attach logImage} cannot be added to Button: Button renders a <button>, not an <img>, so it does not satisfy HTMLImageElement -->
+<!--<Button {@attach logImage} {@attach logValue} />-->
 <Button {@attach logValue} bind:this={btn} />

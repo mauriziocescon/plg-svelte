@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import Consumer from './Consumer.svelte';
+	import Consumer from './wrapper/Consumer.svelte';
 	import Counter from './Counter.svelte';
 	import Title from './Title.svelte';
 
