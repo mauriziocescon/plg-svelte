@@ -1,12 +1,9 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
-
-	import Attachments from './Attachments.svelte';
+	import Consumer from './Consumer.svelte';
 	import Counter from './Counter.svelte';
 	import Title from './Title.svelte';
-
-	let att: Attachments | undefined = $state();
 
 	onDestroy(() => {
 		console.log('Foo page destroyed');
@@ -21,7 +18,7 @@
 
 <h3 out:fade={{ duration: 1000 }}>Foo fades out</h3>
 
-<Attachments bind:this={att} />
+<Consumer />
 <hr />
 <Counter />
 <hr />
