@@ -22,4 +22,5 @@
 
 <!-- ⚠️ {@attach logImage} cannot be added to Button: Button renders a <button>, not an <img>, so it does not satisfy HTMLImageElement -->
 <!--<Button {@attach logImage} {@attach logValue} />-->
+
 <Button {@attach logValue} bind:this={btn} />
