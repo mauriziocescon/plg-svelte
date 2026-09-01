@@ -29,5 +29,7 @@
 <!-- ✅ Img renders an <img>, so {@attach logImage} type-checks -->
 <Img {@attach logImage} alt="" src="/favicon.png" />
 
-<!-- ❌️ {@attach logValue} cannot be added to Img: <img> has no `value` -->
+<!-- ❌️ {@attach logValue} cannot be added to Img: Img's props declare
+     [key: symbol]: Attachment<HTMLImageElement>, and <img> has no `value`,
+     so logValue (which needs HTMLElement & { value }) is rejected. -->
 <!--<Img {@attach logValue} alt="" src="/favicon.png" />-->
