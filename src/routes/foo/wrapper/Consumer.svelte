@@ -3,6 +3,7 @@
 	import Img from './Img.svelte';
 
 	let btn: Button | undefined = $state();
+	let img: Img | undefined = $state();
 
 	function logValue(node: HTMLElement & { value: string }) {
 		node.addEventListener('input', () => console.log(node.value));
