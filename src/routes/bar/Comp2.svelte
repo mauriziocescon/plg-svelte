@@ -15,7 +15,7 @@
 	const count = getCountContext();
 </script>
 
-AppName: {app.appName}
+<h3>Comp2: {app.appName}</h3>
 <p>Count in Comp2: {count.getCount()}</p>
 <input bind:value />
 {#if children}

@@ -17,9 +17,10 @@
 <input bind:value />
 <br />
 
-{#snippet c()}
+<hr />
+<Comp2>
 	<Child />
-{/snippet}
-
-<Comp2 children={c} />
+</Comp2>
+<hr />
 <Comp3 />
+<hr />
