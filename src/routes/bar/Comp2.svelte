@@ -11,7 +11,6 @@
 
 	let value = $state('');
 	setCountContext(new Count(() => value.length));
-
 	const count = getCountContext();
 </script>
 
