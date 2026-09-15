@@ -15,6 +15,9 @@
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run"
 	},
+	"dependencies": {
+		"bits-ui": "^2.19.2"
+	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@sveltejs/adapter-auto": "^7.0.1",
