@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Accordion from './Accordion.svelte';
 	import Button from './Button.svelte';
 	import Img from './Img.svelte';
 
@@ -34,3 +35,5 @@
      [key: symbol]: Attachment<HTMLImageElement>, and <img> has no `value`,
      so logValue (which needs HTMLElement & { value }) is rejected. -->
 <!--<Img {@attach logValue} alt="" src="/favicon.png" />-->
+
+<Accordion />
