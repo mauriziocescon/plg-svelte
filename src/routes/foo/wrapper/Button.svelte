@@ -7,3 +7,9 @@
 <button {...props}>
 	{@render children?.()}
 </button>
+
+<style>
+    .btn-bold {
+        background-color: yellow;
+    }
+</style>

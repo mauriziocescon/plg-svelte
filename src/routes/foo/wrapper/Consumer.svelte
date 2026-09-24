@@ -2,6 +2,7 @@
 	import Accordion from './Accordion.svelte';
 	import Button from './Button.svelte';
 	import Img from './Img.svelte';
+	import type { Attachment } from 'svelte/attachments';
 
 	let btn: Button | undefined = $state();
 	let img: Img | undefined = $state();
@@ -12,6 +13,25 @@
 
 	function logImage(node: HTMLImageElement) {
 		node.addEventListener('load', () => console.log(node.currentSrc, node.naturalWidth, node.naturalHeight));
+	}
+
+	function backgroundColor(color: string = 'red'): Attachment<HTMLElement> {
+		return (element) => {
+			const previous = element.style.backgroundColor;
+			element.style.backgroundColor = color;
+
+			// Cleanup: restore the previous value when the attachment is removed/updated.
+			return () => {
+				element.style.backgroundColor = previous;
+			};
+		};
+	}
+
+	function applyClass(className: string = 'btn-bold'): Attachment {
+		return (element) => {
+			element.classList.add(className);
+			return () => element.classList.remove(className);
+		};
 	}
 </script>
 
@@ -26,7 +46,9 @@
 <!-- ❌️ {@attach logImage} cannot be added to Button: Button renders a <button>, not an <img>, so it does not satisfy HTMLImageElement -->
 <!--<Button {@attach logImage} {@attach logValue} />-->
 
-<Button {@attach logValue} bind:this={btn} />
+<Button {@attach logValue} {@attach backgroundColor()} bind:this={btn}>Click me</Button>
+
+<Button {@attach applyClass()}>Click me (yellow)</Button>
 
 <!-- ✅ Img renders an <img>, so {@attach logImage} type-checks -->
 <Img {@attach logImage} alt="" src="/favicon.png" />
