@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { defineContext, useCounter } from './count-context.svelte.ts';
 
-	defineContext(() => 'Counter', () => 0);
+	defineContext(
+		() => 'Counter',
+		() => 0
+	);
 	const ctx = useCounter();
 </script>
 

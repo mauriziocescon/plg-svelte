@@ -1,6 +1,6 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
-	import { setAppContext } from '$lib/app-context.svelte';
+	import favicon from '#lib/assets/favicon.svg';
+	import { setAppContext } from '#lib/app-context.svelte.js';
 
 	let { children } = $props();
 
