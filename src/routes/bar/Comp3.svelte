@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { getAppContext } from '$lib/app-context.svelte';
+	import { getAppContext } from '#lib/app-context.svelte.js';
 	import { getCountContext } from './count-context.svelte.ts';
 
 	const { children }: { children?: Snippet } = $props();
@@ -36,14 +36,14 @@
 </dialog>
 
 <style>
-    dialog::backdrop {
-        background: rgba(0, 0, 0, 0.5);
-    }
+	dialog::backdrop {
+		background: rgba(0, 0, 0, 0.5);
+	}
 
-    dialog {
-        border: none;
-        border-radius: 8px;
-        padding: 2rem;
-        max-width: 400px;
-    }
+	dialog {
+		border: none;
+		border-radius: 8px;
+		padding: 2rem;
+		max-width: 400px;
+	}
 </style>

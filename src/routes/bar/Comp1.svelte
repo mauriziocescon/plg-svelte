@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getAppContext } from '$lib/app-context.svelte';
+	import { getAppContext } from '#lib/app-context.svelte.js';
 	import { Count, getCountContext, setCountContext } from './count-context.svelte.ts';
 	import Comp2 from './Comp2.svelte';
 	import Comp3 from './Comp3.svelte';
@@ -17,9 +17,10 @@
 <input bind:value />
 <br />
 
-{#snippet c()}
+<hr />
+<Comp2>
 	<Child />
-{/snippet}
-
-<Comp2 children={c} />
+</Comp2>
+<hr />
 <Comp3 />
+<hr />
